@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "sass": "^1.26.10"
+  },
+  "name": "tsinla",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:domferris/tsinla.git",
+  "author": "Dominic Ferris <ferris.dominic@gmail.com>",
+  "license": "MIT"
+}
