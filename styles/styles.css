@@ -11,10 +11,55 @@ html {
           box-sizing: inherit;
 }
 
-img {
-  width: 300px;
-  height: 300px;
-  -o-object-fit: cover;
-     object-fit: cover;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fafafa;
+  color: #0f0f0f;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.title {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+}
+
+.title h1 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.image-container {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.image-container img {
+  max-width: 70%;
+  max-height: 70%;
+}
+
+.nav-image-selector {
+  position: absolute;
+  bottom: 4em;
+  left: 50%;
 }
 /*# sourceMappingURL=styles.css.map */

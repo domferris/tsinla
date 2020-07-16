@@ -11,31 +11,27 @@
   <main data-barba="wrapper">
     <!-- put here content that will not change
     between your pages, like <header> or <nav> -->
-    <h1>This story is no longer available.</h1>
-    <nav>
-      <ul>
-        <li>
-          <a href="./">browse</a>
-        </li>
-        <li>
-          <a href="./">about</a>
-        </li>
-      </ul>
-    </nav>
+    <div class="title">
+      <h1>This story is no longer available.</h1>
+    </div>
 
-    <section data-barba="container" data-barba-namespace="home">
+    <section class="barba-container" data-barba="container" data-barba-namespace="home">
       <!-- put here the content you wish to change
       between your pages, like your main content <h1> or <p> -->
-        <img src="images/photos/DCF-Pentax K1000_Ilford HP5 400-180403-000012610012.JPG" alt="">
+        <div class="image-container">
+          <img src="images/photos/DCF-Pentax K1000_Ilford HP5 400-180403-000012610012.JPG" alt="">
+        </div>
       </section>
 
     <!-- put here content that will not change
     between your pages, like <footer> -->
-      <a href="./">1</a>
-      <a href="./image2.html">2</a>
-      <a href="./image3.html">3</a>
-      <a href="./image4.html">4</a>
-      <a href="./image5.html">5</a>
+      <nav class="nav-image-selector">
+        <a href="./">1</a>
+        <a href="./image2.html">2</a>
+        <a href="./image3.html">3</a>
+        <a href="./image4.html">4</a>
+        <a href="./image5.html">5</a>
+      </nav>
   </main>
   <script src="https://unpkg.com/@barba/core"></script>
   <script>
