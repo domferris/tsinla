@@ -34,9 +34,33 @@
         <a href="./image6.html">6</a>
       </nav>
   </main>
+
+  <!-- load barba (UMD version) -->
   <script src="https://unpkg.com/@barba/core"></script>
+
+  <!-- load gsap animation library (minified version) -->
+  <script src="https://unpkg.com/gsap@latest/dist/gsap.min.js"></script>
+
   <script>
-    barba.init();
+    barba.init({
+        transitions: [{
+          name: 'opacity-transition',
+          leave(data) {
+            return gsap.to(data.current.container, {
+              opacity: 0
+            });
+          },
+          enter(data) {
+            return gsap.from(data.next.container, {
+              opacity: 0
+            });
+          }
+        }]
+    });
   </script>
+
+  <!-- polyfill.io service for IE10+ support -->
+  <script crossorigin="anonymous"
+    src="https://polyfill.io/v3/polyfill.min.js?features=default%2CArray.prototype.find%2CIntersectionObserver"></script>
 </body>
 </html>
