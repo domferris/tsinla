@@ -31,6 +31,24 @@ main {
   }
 }
 
+ul.transition {
+  list-style: none;
+  display: flex;
+  position: absolute;
+  z-index: 10;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  pointer-events: none;
+
+  li {
+    transform: scaleY(0);
+    background: rgb(250, 250, 250);
+    width: 20%;
+  }
+}
 
 .barba-container {
   // border: 1px solid red;
@@ -58,23 +76,16 @@ main {
   bottom: 4em;
   left: 50%;
   z-index: 11;
-}
+  cursor: default;
 
-ul.transition {
-  list-style: none;
-  display: flex;
-  position: absolute;
-  z-index: 10;
-  height: 100vh;
-  width: 100%;
-  top: 0;
-  left: 0;
-  margin: 0;
-  pointer-events: none;
+  a {
+    text-decoration: none;
+    color: rgb(10, 10, 10);
+    cursor: default;
+    margin: 1.75em;
 
-  li {
-    transform: scaleY(0);
-    background: rgb(250, 250, 250);
-    width: 20%;
+    &:hover {
+      color: rgb(125, 125, 125);
+    }
   }
 }

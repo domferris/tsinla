@@ -33,6 +33,28 @@ main {
   font-weight: 400;
 }
 
+ul.transition {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  z-index: 10;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  pointer-events: none;
+}
+
+ul.transition li {
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  background: #fafafa;
+  width: 20%;
+}
+
 .barba-container {
   width: 100%;
   height: 100%;
@@ -64,27 +86,17 @@ main {
   bottom: 4em;
   left: 50%;
   z-index: 11;
+  cursor: default;
 }
 
-ul.transition {
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
-  z-index: 10;
-  height: 100vh;
-  width: 100%;
-  top: 0;
-  left: 0;
-  margin: 0;
-  pointer-events: none;
+.nav-image-selector a {
+  text-decoration: none;
+  color: #0a0a0a;
+  cursor: default;
+  margin: 1.75em;
 }
 
-ul.transition li {
-  -webkit-transform: scaleY(0);
-          transform: scaleY(0);
-  background: #fafafa;
-  width: 20%;
+.nav-image-selector a:hover {
+  color: #7d7d7d;
 }
 /*# sourceMappingURL=styles.css.map */
