@@ -12,8 +12,17 @@
     <!-- put here content that will not change
     between your pages, like <header> or <nav> -->
     <div class="title">
-      <h1>This story is no longer available.</h1>
+      <!-- <h1>This story is no longer available.</h1> -->
+      <!-- 👆🏼 INCORPORATE IN WIP FULL-SCREEN GRAPHIC -->
     </div>
+
+    <ul class="transition">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
 
     <section class="barba-container" data-barba="container" data-barba-namespace="home">
       <!-- put here the content you wish to change
@@ -42,20 +51,50 @@
   <script src="https://unpkg.com/gsap@latest/dist/gsap.min.js"></script>
 
   <script>
+
+    const pageTransition = () => {
+      const timeline = gsap.timeline();
+
+      timeline.to('ul.transition li', {
+        duration: 0.5,
+        scaleY: 1,
+        transformOrigin: "bottom left",
+        stagger: 0.2
+      })
+
+      timeline.to('ul.transition li', {
+        duration: 0.5,
+        scaleY: 0,
+        transformOrigin: "bottom left",
+        stagger: 0.1,
+        delay: 0.1
+      })
+    };
+
+    const delay = (num) => {
+      num = num || 2000;
+      return new Promise(done => {
+        setTimeout(() => {
+          done();
+        }, num);
+      });
+    };
+
     barba.init({
-        transitions: [{
-          name: 'opacity-transition',
-          leave(data) {
-            return gsap.to(data.current.container, {
-              opacity: 0
-            });
-          },
-          enter(data) {
-            return gsap.from(data.next.container, {
-              opacity: 0
-            });
-          }
-        }]
+      sync: true,
+
+      transitions: [{
+        async leave(data) {
+          const done = this.async();
+
+          // delay the page transition to time animations
+          pageTransition();
+          await delay(1200);
+          done();
+        }
+      }]
+
+
     });
   </script>
 
