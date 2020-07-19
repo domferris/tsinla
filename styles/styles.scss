@@ -74,8 +74,8 @@ ul.transition {
 
 .nav-image-selector {
   position: absolute;
-  bottom: 4em;
-  left: calc(50% - 13em);
+  right: 2em;
+  top: calc(50% - 9em);
   z-index: 11;
   cursor: default;
 
@@ -83,7 +83,7 @@ ul.transition {
     text-decoration: none;
     color: rgb(10, 10, 10);
     cursor: default;
-    margin: 1.75em;
+    margin: 1em;
 
     &:hover {
       color: rgb(125, 125, 125);
