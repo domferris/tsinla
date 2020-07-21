@@ -31,7 +31,7 @@ main {
 
 .title h1 {
   font-size: 1rem;
-  font-weight: 200;
+  font-weight: 400;
 }
 
 ul.transition {
@@ -82,10 +82,29 @@ ul.transition li {
           clip-path: polygon(0, 0, 100% 0, 100% 0, 0 0);
 }
 
+.image-container .image-lower-third {
+  position: absolute;
+  bottom: 2em;
+  left: 2em;
+}
+
+.image-container .image-lower-third .image-title {
+  font-size: 1.1em;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+}
+
+.image-container .image-lower-third .image-info {
+  font-size: 0.8em;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 0.02em;
+}
+
 .nav-image-selector {
   position: absolute;
-  bottom: 4em;
-  left: calc(50% - 13em);
+  right: 2em;
+  top: calc(50% - 9em);
   z-index: 11;
   cursor: default;
 }
@@ -94,7 +113,7 @@ ul.transition li {
   text-decoration: none;
   color: #0a0a0a;
   cursor: default;
-  margin: 1.75em;
+  margin: 1em;
 }
 
 .nav-image-selector a:hover {
