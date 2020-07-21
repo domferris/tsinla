@@ -28,7 +28,7 @@ main {
 
   h1 {
     font-size: 1rem;
-    font-weight: 200;
+    font-weight: 400;
   }
 }
 
@@ -69,7 +69,26 @@ ul.transition {
     max-width: 70%;
     max-height: 70%;
     clip-path: polygon(0, 0, 100% 0, 100% 0, 0 0);
-  }  
+  }
+
+  .image-lower-third {
+    position: absolute;
+    bottom: 2em;
+    left: 2em;
+
+    .image-title {
+      font-size: 1.1em;
+      font-weight: 600;
+      letter-spacing: 0.025em;
+    }
+
+    .image-info {
+      font-size: 0.8em;
+      font-weight: 400;
+      font-style: italic;
+      letter-spacing: 0.02em;
+    }
+  }
 }
 
 .nav-image-selector {
